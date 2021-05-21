@@ -27,3 +27,5 @@ function remove() {
 
 // replace au lieu de innerText ne fonctionne pas.
 
+
+myString.replace(document.getElementById('lastname').value, '');
