@@ -23,14 +23,21 @@ Manque la gestion des chiffre entiers*/
 
 document.addEventListener("submit", function () {
     if (isNaN(firstNumber.value) == true) {
-        alert('Le premier champs doit contenir des chiffres exclusivement');
+        alert('Le premier champ doit contenir des chiffres exclusivement');
     }
     else if (isNaN(secondNumber.value) == true) {
-        alert('Le second champs doit contenir des chiffres exclusivement');
-    } else if (!isFinite(firstNumber.value)) {
-        alert('Votre premier chiffre doit contenir des chiffres ET une virgule (mais pas de point)');
+        alert('Le second champ doit contenir des chiffres exclusivement');
+    } else if (Number.isInteger(parseFloat(firstNumber.value))) {
+        alert('Votre premier chiffre doit contenir des chiffres après la virgule :)');
+
+    } else if (Number.isInteger(parseFloat(secondNumber.value))) {
+        alert('Votre second chiffre doit contenir des chiffres après la virgule :)');
+
     } else {
-        alert('C\'est bon');
+        let result = Math.trunc(firstNumber.value) * secondNumber.value;
+        alert(result);
+        /* alert('toto' +
+            math.trunc(parseFloat(firstNumber.value)) * (parseFloat(secondNumber.value))); */
     }
 
 

@@ -16,16 +16,19 @@ function remove() {
     resetCity.innerText = "";
 }; */
 
-let resetName = document.getElementById('lastname').value;
+/* let resetName = document.getElementById('lastname').value;
 let resetFirstName = document.getElementById('firstname').value;
-let resetCity = document.getElementById('city').value;
+let resetCity = document.getElementById('city').value; */
 function remove() {
-    resetName.replace(' ');
-    resetFirstName.innerText = "";
-    resetCity.innerText = "";
+    document.getElementById('lastname').value = ('');
+    document.getElementById('firstname').value = ('');
+    document.getElementById('city').value = ('');
+    /*   resetName.replace(' ');
+      resetFirstName.innerText = "";
+      resetCity.innerText = ""; */
 };
 
 // replace au lieu de innerText ne fonctionne pas.
 
 
-myString.replace(document.getElementById('lastname').value, '');
+// myString.replace(document.getElementById('lastname').value, '');
