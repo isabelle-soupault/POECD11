@@ -67,4 +67,59 @@ Ici, le strongElement va créer un élément strong dans mon DOM.
 Ensuite, le strongElement.innerText va indiquer le contenu qu'on souhaite récupérer.
 Et pour finit le displaySpan.appendChild(strongElement); va dire où on affiche exactement le contenu.
 
-/*
+Code  corrigé : /!\ il y a plusieurs façons d'obtenir le même résultat !
+
+
+document.querySelector('input[type="submit"]').addEventListener('click', displayResult);
+
+
+ * Compute result after checking if inputs represents decimal numbers with isNan and indexOf functions
+
+ function computeResult() {
+    // Get inputs value
+    let number1Value = number1.value;
+    let number2Value = number2.value;
+
+    // Replace comma by point if necessary
+    number1Value = number1Value.replace(',', '.');
+    number2Value = number2Value.replace(',', '.');
+
+    // Check if inputs are numbers. If not script is stopped
+    if(isNaN(number1Value) || isNaN(number2Value)){
+        return;
+    }
+
+
+    if ((number1Value.indexOf('.') == -1 || number1Value.indexOf('.') == number1Value.length - 1)
+        || (number2Value.indexOf('.') == -1 || number2Value.indexOf('.') == number2Value.length - 1)) {
+        return;
+    }
+
+ * Truncate first input and compute result
+
+
+    number1Value = Math.trunc(number1Value);
+    return number1Value * number2Value;
+}
+
+
+ * Display result on HTML page
+
+function displayResult(){
+    const result = computeResult();
+    let displaySpan = document.getElementById('result');
+    let strongElement = document.createElement('strong');
+    if(result === undefined){
+        strongElement.innerText = 'Aucun résultat ! Saisissez deux nombres décimaux !';
+    }else{
+        strongElement.innerText = 'Résultat : ' + result;
+    }
+    if(displaySpan.hasChildNodes()){
+        let oldStrong = displaySpan.firstChild;
+        displaySpan.removeChild(oldStrong);
+    }
+    displaySpan.appendChild(strongElement);
+}
+
+
+*/
