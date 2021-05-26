@@ -32,3 +32,30 @@ function remove() {
 
 
 // myString.replace(document.getElementById('lastname').value, '');
+
+//________________________//
+//                        //
+//      CORRECTION        //
+//________________________//
+
+/*
+let button = document.querySelector('button');
+button.addEventListener('click', restForm);
+function restForm(){
+    let inputs = document.getElementsByTagName('input');
+    for (i =0, 1< imputs.lengh; i++){
+        document.getElementsById('form')[i].value= '';
+    }
+}
+
+Autre solution
+
+let button = document.querySelector('button');
+button.addEventListener('click', function(){
+    let inputs = document.querySelectorAll('input');
+    inputs.forEach(elt =>{
+        elt.value='';
+    });
+});
+
+*/
