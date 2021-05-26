@@ -39,3 +39,22 @@ image.addEventListener('mouseover', function () {
 /* image.addEventListener('mouseout', function () {
     image.src = "images/image1.jpg";
 }); */
+
+//________________________//
+//                        //
+//      CORRECTION        //
+//________________________//
+
+/*
+let image = document.getElementById("image1");
+image.addEventListener('mouseover', function () {
+    image.setAttribute("src","images/image1_2.jpg" )
+}
+
+ou encore, on rappelle que le let image n'est pas nécessaire vu que le HTML génère des éléments utilisables en JS
+
+image1.addEventListener('mouseover', function () {
+    image.setAttribute("src","images/image1_2.jpg" )
+}
+
+*/
