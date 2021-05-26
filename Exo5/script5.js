@@ -22,11 +22,6 @@ image5.addEventListener('mouseover', function () {
 
 //bonus - faire ça en une seule fonction
 
-let image1 = document.getElementById("image1");
-let image2 = document.getElementById("image2");
-let image3 = document.getElementById("image3");
-let image4 = document.getElementById("image4");
-let image5 = document.getElementById("image5");
 
 function changeImg(imgNumber) {
     switch (imgNumber) {
@@ -58,6 +53,7 @@ image4.addEventListener('mouseover', function () {
 image5.addEventListener('mouseover', function () {
     changeImg(5)
 });
+// ici ça marche, mais il y a une répétition et on veut autant que possible éviter ces répétitions
 
 
 /*     image2.addEventListener('mouseover', changeImg);
@@ -83,10 +79,7 @@ image5.src = "images/image5_2.jpg"; */
     image5.src = "images/image5_2.jpg";
 
 });
-
  */
-
-
 
 /* let image1 = document.getElementById("image1");
 if ('mouseover') {
@@ -95,3 +88,29 @@ if ('mouseover') {
     image1.src = "images/image1.jpg";
 }
  */
+
+/* let imgMouseover = document.querySelector('img');
+imgMouseover.forEach('mouseover', function (imgMouseover) {
+    image1.src = "images/image1_2.jpg";
+    image2.src = "images/image2_2.jpg";
+    image3.src = "images/image3_2.jpg";
+    image4.src = "images/image4_2.jpg";
+    image5.src = "images/image5_2.jpg";
+}); */
+
+//________________________//
+//                        //
+//      CORRECTION        //
+//________________________//
+
+/*
+
+const changeImage = ()=> this.src="images/image" + this.id + "_2.jpg";
+function changeImage(){
+    this.src="images/"
+}
+for (let i=0; i < images.lenght; i++){
+    images[i].addEventListener('mouseover', changeImage);
+}
+
+*/
