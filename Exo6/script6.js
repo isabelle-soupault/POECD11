@@ -109,4 +109,13 @@ image5.addEventListener('mouseout', function () {
 
 /*
 
+let images = document.querySelectorAll('img');
+image.forEach(image =>{
+    image.addEventListener('mouseover', ()=> image.src = 'images/' + image.id +_2.jpg);
+});
+
+images.forEach(image =>{
+    image.addEventListener('mouseout', () => image.src = 'images/' + '.jpg')
+});
+
 */
